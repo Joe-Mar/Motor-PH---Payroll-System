@@ -17,13 +17,6 @@ import java.util.Scanner;
  * This class interacts with the user and fetches attendance records.
  */
 public class AttendanceService {
-
-    /**
-     * Allows the user to view an employee's attendance records by entering their Employee ID.
-     * This method is used in the Main class to scan and display attendance records.
-     *
-     * @param scanner Scanner object to take user input.
-     */
     public static void viewAttendance(Scanner scanner) {
         // Prompt the user to enter an Employee ID
         System.out.print("Enter Employee ID: ");
