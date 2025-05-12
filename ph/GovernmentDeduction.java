@@ -13,11 +13,6 @@ public class GovernmentDeduction {
     private double pagIbigDeduction;
     private double philHealthDeduction;
 
-    /**
-     * Constructor that calculates all government deductions based on gross income.
-     * 
-     * @param grossIncome The employee's gross income.
-     */
     public GovernmentDeduction(double grossIncome) {
         this.sssDeduction = calculateSSS(grossIncome);
         this.pagIbigDeduction = calculatePagIbig(grossIncome);
@@ -37,21 +32,10 @@ public class GovernmentDeduction {
         return philHealthDeduction;
     }
 
-    /**
-     * Computes the total government deductions.
-     * 
-     * @return The sum of SSS, Pag-IBIG, and PhilHealth deductions.
-     */
     public double getTotalDeductions() {
         return sssDeduction + pagIbigDeduction + philHealthDeduction;
     }
 
-    /**
-     * Computes the SSS deduction based on the employee's gross salary.
-     * 
-     * @param grossSalary The employee's gross salary.
-     * @return The SSS deduction amount.
-     */
     public static double calculateSSS(double grossSalary) {
         double[][] sssTable = {
             {3250, 135}, {3750, 157.50}, {4250, 180}, {4750, 202.50}, {5250, 225}, 
@@ -73,22 +57,10 @@ public class GovernmentDeduction {
         return 1125; // Maximum SSS deduction for salaries above 24750
     }
 
-    /**
-     * Computes the Pag-IBIG deduction based on the employee's gross pay.
-     * 
-     * @param grossPay The employee's gross pay.
-     * @return The Pag-IBIG deduction amount.
-     */
     public static double calculatePagIbig(double grossPay) {
         return Math.min(grossPay * 0.02, 100);
     }
 
-    /**
-     * Computes the PhilHealth deduction based on the employee's gross income.
-     * 
-     * @param grossIncome The employee's gross income.
-     * @return The PhilHealth deduction amount.
-     */
     public static double calculatePhilHealth(double grossIncome) {
         return (grossIncome <= 10000) ? 300 : Math.min((grossIncome * 0.03) / 2, 900);
     }
