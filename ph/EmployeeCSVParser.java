@@ -3,21 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package motor.ph;
-
-/**
- *
- * @author lasic
  /**
  * Parses employee data from a CSV file and converts it into an Employee object.
  */
 public class EmployeeCSVParser {
-
-    /**
-     * Converts a CSV row (as a string array) into an Employee object.
-     * 
-     * @param data A string array containing employee details from the CSV file.
-     * @return An Employee object if parsing is successful, otherwise null.
-     */
     public static Employee parseEmployee(String[] data) {
         try {
             // Extracting employee details from CSV data
