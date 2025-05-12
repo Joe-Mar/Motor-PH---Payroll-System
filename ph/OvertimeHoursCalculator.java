@@ -5,11 +5,6 @@
 package motor.ph;
 
 import java.time.LocalDate;
-
-/**
- *
- * @author lasic
- */
 // Concrete Class for Overtime Hours Calculation
 public class OvertimeHoursCalculator extends WorkHoursCalculator {
     public OvertimeHoursCalculator(int employeeId, LocalDate startDate, LocalDate endDate) {
