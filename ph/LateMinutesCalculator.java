@@ -5,11 +5,6 @@
 package motor.ph;
 
 import java.time.LocalDate;
-
-/**
- *
- * @author lasic
- */
 // Concrete Class for Late Minutes Calculation
 public class LateMinutesCalculator extends WorkHoursCalculator {
     public LateMinutesCalculator(int employeeId, LocalDate startDate, LocalDate endDate) {
