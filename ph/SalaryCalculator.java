@@ -4,10 +4,6 @@
  */
 package motor.ph;
 
-/**
- *
- * @author lasic
- */
 public class SalaryCalculator {
     //Method to Use for  Deduction Calculation with GrossSalary
     public static double computeDeductions(double grossSalary) {
