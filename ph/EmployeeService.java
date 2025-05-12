@@ -5,32 +5,16 @@
 package motor.ph;
 
 /**
- *
- * @author lasic
- */
-/**
  * Handles retrieval and display of employee details.
  */
 public class EmployeeService {
 
-    /**
-     * Retrieves an employee by their employee ID.
-     * 
-     * @param empId The employee ID.
-     * @return Employee object if found, otherwise null.
-     */
     public static Employee getEmployeeByEmployeeId(int empId) {
         return EmployeeDataManager.readFromCSV().stream()
                 .filter(emp -> emp.getEmployeeId() == empId)
                 .findFirst()
                 .orElse(null);
     }
-
-    /**
-     * Displays an employee's details, including personal and financial information.
-     * 
-     * @param employeeId The ID of the employee to view.
-     */
     public static void viewEmployeeDetails(int employeeId) {
         Employee employee = getEmployeeByEmployeeId(employeeId);
 
