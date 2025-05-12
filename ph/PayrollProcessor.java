@@ -3,13 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package motor.ph;
-
-/**
- *
- * @author lasic
- */
+// Use for Calculation of Gross Salary and Net Salary
 public class PayrollProcessor {
-    // (same fields, constructor, and methods as above)
 
     private static final double OVERTIME_RATE = 1.25; //OT Rate
     private static final int WORK_DAYS_PER_MONTH = 22; // Monthly Number of Working Days
