@@ -6,10 +6,6 @@ package motor.ph;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author lasic
- */
 // Abstract Class for Work Hours Calculation (Abstraction)
 public abstract class WorkHoursCalculator {
     protected int employeeId;
