@@ -6,10 +6,6 @@ package motor.ph;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author lasic
- */
 // Concrete Class for Regular Hours Calculation
 public class RegularHoursCalculator extends WorkHoursCalculator {
     public RegularHoursCalculator(int employeeId, LocalDate startDate, LocalDate endDate) {
