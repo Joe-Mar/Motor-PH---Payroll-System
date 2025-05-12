@@ -20,12 +20,6 @@ public class AttendanceManager {
     // The file path where attendance records are stored.
     private static final String FILE_NAME = "C:\\Users\\lasic\\OneDrive\\Documents\\NetBeansProjects\\MOTOR-PH\\src\\motor\\resources\\attendance_data.csv";
 
-    /**
-     * Saves an attendance record to the CSV file.
-     * This method appends a new entry to the existing file.
-     *
-     * @param attendance The attendance record to be saved.
-     */
     public static void saveAttendanceToCSV(AttendanceRecord attendance) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(FILE_NAME, true))) {
             // Writes the attendance details as a new line in the CSV file.
@@ -36,12 +30,6 @@ public class AttendanceManager {
         }
     }
 
-    /**
-     * Reads attendance records from the CSV file and returns a list of AttendanceRecord objects.
-     * If the file does not exist or is empty, it returns an empty list.
-     *
-     * @return A list of attendance records.
-     */
     public static List<AttendanceRecord> readFromCSV() {
         List<AttendanceRecord> attendanceList = new ArrayList<>();
         File file = new File(FILE_NAME);
@@ -98,13 +86,6 @@ public class AttendanceManager {
 
         return attendanceList; // Return the list of attendance records.
     }
-
-    /**
-     * Retrieves attendance records for a specific employee by their employee ID.
-     *
-     * @param empId The employee's ID.
-     * @return A list of AttendanceRecord objects that belong to the specified employee.
-     */
     public static List<AttendanceRecord> getAttendanceByEmployeeId(int empId) {
         List<AttendanceRecord> filteredRecords = new ArrayList<>();
 
