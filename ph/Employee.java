@@ -29,24 +29,6 @@ public class Employee extends BaseEntity {
     // Salary-related details
     private EmployeeFinancials financials;
 
-    /**
-     * Constructor to initialize an Employee object.
-     * 
-     * @param employeeId Unique ID of the employee
-     * @param lastName Employee's last name
-     * @param firstName Employee's first name
-     * @param birthday Employee's birth date
-     * @param address Employee's home address
-     * @param phoneNumber Contact number
-     * @param sss SSS number
-     * @param philhealth PhilHealth number
-     * @param tin TIN number
-     * @param pagibig Pag-IBIG number
-     * @param status Employment status (e.g., Regular, Probationary)
-     * @param position Job position
-     * @param immediateSupervisor Supervisor's name
-     * @param financials Employee's salary and benefits information
-     */
     public Employee(int employeeId, String lastName, String firstName, String birthday, String address,
                     String phoneNumber, String sss, String philhealth, String tin, String pagibig,
                     String status, String position, String immediateSupervisor, EmployeeFinancials financials) {
