@@ -5,10 +5,6 @@
 package motor.ph;
 
 /**
- *
- * @author lasic
- */
-/**
  * Stores and manages an employee's salary and allowances.
  */
 public class EmployeeFinancials {
@@ -40,22 +36,10 @@ public class EmployeeFinancials {
     public double getGrossSemiMonthlyRate() { return grossSemiMonthlyRate; }
     public double getHourlyRate() { return hourlyRate; }
 
-    /**
-     * Computes total monthly allowances.
-     * 
-     * @return Sum of all allowances.
-     */
     public double getTotalAllowances() {
         return riceSubsidy + phoneAllowance + clothingAllowance;
     }
 
-    /**
-     * Computes prorated total allowances based on workdays.
-     * 
-     * @param totalWorkDays  The total workdays in a month.
-     * @param workDays       The actual days worked.
-     * @return Prorated allowance amount.
-     */
     public double getProratedTotalAllowance(long totalWorkDays, long workDays) {
         if (totalWorkDays > 0) {
             return (getTotalAllowances() / totalWorkDays) * workDays;
@@ -63,12 +47,6 @@ public class EmployeeFinancials {
         return 0;
     }
 
-    /**
-     * Computes allowance based on payroll type (weekly, semi-monthly, monthly).
-     * 
-     * @param payrollType The payroll schedule (weekly, semi-monthly, or monthly).
-     * @return Computed allowance based on payroll type.
-     */
     public double computeAllowance(String payrollType) {
         double divisor = switch (payrollType.toLowerCase()) {
             case "weekly" -> 4.0;
@@ -79,9 +57,6 @@ public class EmployeeFinancials {
         return getTotalAllowances() / divisor;
     }
 
-    /**
-     * Prints financial details of the employee.
-     */
     public void printFinancialDetails() {
         System.out.println("Basic Salary: " + basicSalary);
         System.out.println("Rice Subsidy: " + riceSubsidy);
