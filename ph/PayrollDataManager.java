@@ -6,11 +6,7 @@ package motor.ph;
 
 import java.time.LocalDate;
 import java.util.List;
-
-/**
- *
- * @author lasic
- */
+//Use to process Employee Complete Total Salary
  public class PayrollDataManager {
     public static void processPayrollForAllEmployees(List<Employee> employees) {
         WorkHoursManager workHoursManager = new WorkHoursManager(); // Create an instance of WorkHoursManager
