@@ -16,12 +16,6 @@ import java.util.List;
 public class EmployeeDataManager {
     // File path of the employee CSV file
     private static final String FILE_NAME = "C:\\Users\\lasic\\OneDrive\\Documents\\NetBeansProjects\\MOTOR-PH\\build\\classes\\motor\\resources\\employee-data.csv";
-
-    /**
-     * Reads employee data from the CSV file and returns a list of Employee objects.
-     * 
-     * @return A list of employees from the CSV file.
-     */
     public static List<Employee> readFromCSV() {
         List<Employee> employeeList = new ArrayList<>();
         
