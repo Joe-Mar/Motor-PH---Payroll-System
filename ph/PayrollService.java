@@ -8,10 +8,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-/**
- *
- * @author lasic
- */
 public class PayrollService {
 
     // Method for processing payroll with date range
