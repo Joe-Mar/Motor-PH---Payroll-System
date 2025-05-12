@@ -14,10 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- *
- * @author lasic
- */
 public class WorkHoursService {
     // Path to the CSV file containing attendance records
     private static final String FILE_NAME = "C:\\Users\\lasic\\OneDrive\\Documents\\NetBeansProjects\\MOTOR-PH\\build\\classes\\motor\\resources\\attendance_data.csv";
@@ -25,12 +21,6 @@ public class WorkHoursService {
     // Formatter for handling date formats (MM/dd/yyyy)
     private static final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
-    /**
-     * Reads the CSV file containing employee work hours and returns the data as a list of string arrays.
-     * Each array represents a row from the file, split by commas.
-     *
-     * @return A list of string arrays containing attendance data.
-     */
     public static List<String[]> readCSV() {
         List<String[]> data = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
@@ -49,26 +39,11 @@ public class WorkHoursService {
         return data;
     }
 
-    /**
-     * Checks if a given date falls within a specified date range.
-     *
-     * @param dateStr   The date as a string in MM/dd/yyyy format.
-     * @param startDate The start date of the range.
-     * @param endDate   The end date of the range.
-     * @return true if the date is within the range (inclusive), false otherwise.
-     */
     public static boolean isDateInRange(String dateStr, LocalDate startDate, LocalDate endDate) {
         LocalDate date = LocalDate.parse(dateStr, dateFormatter);
         return (date.isEqual(startDate) || date.isAfter(startDate)) && date.isBefore(endDate.plusDays(1));
     }
 
-    /**
-     * Prompts the user to input an Employee ID and a date range, then displays the total work hours,
-     * regular hours, overtime hours, and late minutes for the given employee within that range.
-     *
-     * @param scanner        The scanner object for user input.
-     * @param DATE_FORMATTER The formatter for date parsing.
-     */
     public static void viewWorkHours(Scanner scanner, DateTimeFormatter DATE_FORMATTER) {
         System.out.print("Enter Employee ID: ");
         if (!scanner.hasNextInt()) {
