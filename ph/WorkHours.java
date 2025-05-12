@@ -7,10 +7,6 @@ package motor.ph;
 import java.time.LocalDate;
 import java.util.List;
 
-/**
- *
- * @author lasic
- */
 public class WorkHours {
     public static List<WorkHoursRecord> getAllWorkHours() {
         return WorkHoursManager.computeWorkHours();
