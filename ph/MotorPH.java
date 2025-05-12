@@ -7,10 +7,6 @@ package motor.ph;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-/**
- *
- * @author lasic
- */
 public class MotorPH {
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
